@@ -5,16 +5,16 @@
 
 /* ===== CSS VARIABLES & THEME ===== */
 :root {
-    /* Color Palette - Earthy & Calm */
-    --primary-dark: #2d3e35;
-    --primary-light: #f5f3f0;
-    --accent-primary: #7b9d8f;
-    --accent-secondary: #a8917d;
-    --text-primary: #3e3e38;
-    --text-secondary: #6b6b63;
-    --text-light: #8b8b7f;
-    --border-color: #e0dbd4;
-    --background-hover: #faf8f5;
+    /* Color Palette - Light & Modern Eye-Catching */
+    --primary-dark: #00d9ff;
+    --primary-light: #ffffff;
+    --accent-primary: #ff006e;
+    --accent-secondary: #ffbe0b;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-light: #7a7a7a;
+    --border-color: #f0f0f0;
+    --background-hover: #f8f8ff;
     
     /* Typography Scale */
     --font-family-display: 'Crimson Text', serif;
@@ -51,13 +51,13 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary-dark: #1f2620;
-        --primary-light: #0f0e0c;
-        --text-primary: #ede9e4;
-        --text-secondary: #a89a8f;
-        --text-light: #807a70;
-        --border-color: #2d3632;
-        --background-hover: #1a1815;
+        --primary-dark: #0099cc;
+        --primary-light: #0a0a0a;
+        --text-primary: #f5f5f5;
+        --text-secondary: #b0b0b0;
+        --text-light: #808080;
+        --border-color: #1a1a1a;
+        --background-hover: #151515;
     }
 }
 
@@ -126,7 +126,7 @@ a:hover {
     top: 0;
     width: var(--sidebar-width);
     height: 100vh;
-    background: linear-gradient(135deg, #2d3e35 0%, #3d4d43 100%);
+    background: linear-gradient(135deg, #00d9ff 0%, #00b8d4 100%);
     color: var(--primary-light);
     padding: var(--spacing-lg);
     display: flex;
@@ -191,19 +191,21 @@ a:hover {
 }
 
 .skills-list li {
-    background: rgba(123, 157, 143, 0.15);
-    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 0, 110, 0.1);
+    color: #ff006e;
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 4px;
     font-size: var(--font-size-small);
-    border: 1px solid rgba(123, 157, 143, 0.3);
+    border: 1.5px solid #ff006e;
     transition: all var(--transition-fast);
+    font-weight: 500;
 }
 
 .skills-list li:hover {
-    background: rgba(123, 157, 143, 0.25);
-    border-color: rgba(123, 157, 143, 0.5);
+    background: rgba(255, 0, 110, 0.2);
+    border-color: #ff006e;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 0, 110, 0.2);
 }
 
 .status-text {
@@ -234,8 +236,8 @@ a:hover {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: rgba(123, 157, 143, 0.15);
-    border: 1px solid rgba(123, 157, 143, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 6px;
     color: var(--primary-light);
     font-weight: 600;
@@ -244,10 +246,10 @@ a:hover {
 }
 
 .social-icon:hover {
-    background: #7b9d8f;
-    border-color: #7b9d8f;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 12px rgba(123, 157, 143, 0.3);
+    background: #ff006e;
+    border-color: #ff006e;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 0, 110, 0.4);
 }
 
 .footer-text {
@@ -302,13 +304,13 @@ a:hover {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 2px;
-    background: var(--accent-primary);
+    height: 3px;
+    background: #ff006e;
     transition: width var(--transition-smooth);
 }
 
 .nav-link:hover {
-    color: var(--accent-primary);
+    color: #ff006e;
 }
 
 .nav-link:hover::after,
@@ -317,7 +319,7 @@ a:hover {
 }
 
 .nav-link.active {
-    color: var(--accent-primary);
+    color: #ff006e;
 }
 
 /* Content Area */
@@ -371,9 +373,9 @@ a:hover {
 }
 
 .card:hover {
-    border-color: var(--accent-primary);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+    border-color: #ff006e;
+    box-shadow: 0 12px 20px rgba(255, 0, 110, 0.15);
+    transform: translateY(-6px);
 }
 
 .card-image {
@@ -415,7 +417,7 @@ a:hover {
 }
 
 .card-link {
-    color: var(--accent-primary);
+    color: #ff006e;
     font-weight: 600;
     font-size: var(--font-size-small);
     display: inline-flex;
@@ -426,7 +428,7 @@ a:hover {
 
 .card-link:hover {
     gap: var(--spacing-sm);
-    color: var(--accent-secondary);
+    color: #ffbe0b;
 }
 
 /* Blog-specific Styling */
@@ -663,4 +665,14 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-secondary);
+
 }
+
+.profile-picture {
+       width: 120px;
+       height: 120px;
+       border-radius: 50%;
+       border: 3px solid #ffbe0b;
+       object-fit: cover;
+       margin-bottom: var(--spacing-lg);
+   }
