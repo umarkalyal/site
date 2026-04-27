@@ -126,7 +126,7 @@ a:hover {
     top: 0;
     width: var(--sidebar-width);
     height: 100vh;
-    background: linear-gradient(135deg, #00d9ff 0%, #00b8d4 100%);
+    background: linear-gradient(135deg, #FFFFFF 0%, #00b8d4 100%);
     color: var(--primary-light);
     padding: var(--spacing-lg);
     display: flex;
