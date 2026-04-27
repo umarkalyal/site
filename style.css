@@ -120,21 +120,43 @@ a:hover {
 }
 
 /* ===== SIDEBAR ===== */
+
 .sidebar {
     position: fixed;
     left: 0;
     top: 0;
     width: var(--sidebar-width);
     height: 100vh;
-    background: linear-gradient(135deg, #FFFFFF 0%, #00b8d4 100%);
+
+    /* Glass background */
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.6),
+        rgba(0, 184, 212, 0.25)
+    );
+
+    /* Glass blur effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
     color: var(--primary-light);
     padding: var(--spacing-lg);
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* Glass border */
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* Depth */
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.1);
+
+    border-radius: 0 15px 15px 0;
+
     z-index: 1000;
 }
+
 
 .sidebar-content {
     flex: 1;
