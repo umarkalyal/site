@@ -80,6 +80,7 @@ body {
     font-size: var(--font-size-body);
 }
 
+
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-display);
@@ -155,6 +156,21 @@ a:hover {
     border-radius: 0 15px 15px 0;
 
     z-index: 1000;
+}
+
+.sidebar:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.7),
+        rgba(0, 184, 212, 0.3)
+    );
+}
+
+.sidebar a {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
 }
 
 
