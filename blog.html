@@ -1,65 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog">
-    <title>Blog</title>
+    <meta name="description" content="Umar Kalyal - Blog">
+    <title>Blog | Umar Kalyal</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- ===== LEFT SIDEBAR ===== -->
+
         <aside class="sidebar">
             <div class="sidebar-content">
-                <!-- Profile Section -->
                 <header class="profile">
-                   <img src="images/umarKalyal.jpg" class="profile-picture" alt="Umar Kalyal">
-                    <h1 class="name">Umar Kalyal</h1>
-                    <p class="tagline">A peaceful programmer in his peaceful world</p>
+                    <img src="images/umarKalyal.jpg" class="profile-picture" alt="Umar Kalyal">
+                    <div>
+                        <h1 class="name">Umar Kalyal</h1>
+                        <p class="tagline">a peaceful programmer<br>in his peaceful world</p>
+                    </div>
                 </header>
-
-                <!-- Skills Section -->
                 <section class="sidebar-section skills-section">
                     <h2 class="section-title">Skills</h2>
                     <ul class="skills-list">
-                        <li>Python</li>
-                        <li>PyTorch</li>
-                        <li>Neovim</li>
-                        <li>Linux</li>
-                        <li>Flask</li>
-                        <li>GitHub</li>
-                        <li>AI/ML</li>
+                        <li>Python</li><li>PyTorch</li><li>Neovim</li>
+                        <li>Linux</li><li>Flask</li><li>GitHub</li><li>AI/ML</li>
                     </ul>
                 </section>
-
-                <!-- Status Section -->
                 <section class="sidebar-section status-section">
                     <h2 class="section-title">Status</h2>
                     <p class="status-text">Open to collaborate on research</p>
                 </section>
             </div>
-
-            <!-- Social Footer -->
             <footer class="sidebar-footer">
+                <div class="theme-toggle">
+                    <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark mode"></button>
+                    <span class="theme-label" id="themeLabel">Light Mode</span>
+                </div>
                 <nav class="social-links">
-                    <a href="https://www.kaggle.com/programmerx3d" class="social-icon" title="Kaggle" aria-label="Kaggle">K</a>
-                    <a href="https://x.com/umarkalyal1" class="social-icon" title="X">𝕏</a>
-                    <a href="https://www.instagram.com/umarkalyal1/" class="social-icon" title="Instagram">◆</a>
-                    <a href="https://www.facebook.com/profile.php?id=61555589257742" class="social-icon" title="Facebook">f</a>
+                    <a href="#" class="social-icon" title="X">𝕏</a>
+                    <a href="#" class="social-icon" title="Instagram">◆</a>
+                    <a href="#" class="social-icon" title="Facebook">f</a>
                     <a href="#" class="social-icon" title="Upwork">U</a>
-                    <a href="https://www.linkedin.com/in/umarkalyal/" class="social-icon" title="LinkedIn">in</a>
+                    <a href="#" class="social-icon" title="LinkedIn">in</a>
                     <a href="#" class="social-icon" title="Skool">S</a>
-                    <a href="https://substack.com/@umarkalyal" class="social-icon" title="Substack">⚡</a>
+                    <a href="#" class="social-icon" title="Substack">⚡</a>
                 </nav>
                 <p class="footer-text">&copy; 2024 Umar Kalyal</p>
             </footer>
         </aside>
 
-        <!-- ===== MAIN CONTENT AREA ===== -->
         <main class="main-content">
-            <!-- Navigation Bar -->
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link">About</a></li>
@@ -68,14 +59,13 @@
                 </ul>
             </nav>
 
-            <!-- Content Area -->
             <section class="content">
                 <h2>Blog</h2>
                 <div class="card-grid">
-                    <!-- Blog Post 1 -->
-                    <article class="card blog-card">
+
+                    <article class="card">
                         <div class="card-image">
-                            <img src="https://via.placeholder.com/400x250?text=Blog+Post+1" alt="Blog Post 1">
+                            <img src="https://via.placeholder.com/400x220/0a1628/00d9ff?text=Transformers" alt="Transformer Architectures">
                         </div>
                         <div class="card-body">
                             <p class="blog-date">April 15, 2024</p>
@@ -85,10 +75,9 @@
                         </div>
                     </article>
 
-                    <!-- Blog Post 2 -->
-                    <article class="card blog-card">
+                    <article class="card">
                         <div class="card-image">
-                            <img src="https://via.placeholder.com/400x250?text=Blog+Post+2" alt="Blog Post 2">
+                            <img src="https://via.placeholder.com/400x220/0a1628/ff4d9d?text=Flask+APIs" alt="Flask APIs">
                         </div>
                         <div class="card-body">
                             <p class="blog-date">April 8, 2024</p>
@@ -98,10 +87,9 @@
                         </div>
                     </article>
 
-                    <!-- Blog Post 3 -->
-                    <article class="card blog-card">
+                    <article class="card">
                         <div class="card-image">
-                            <img src="https://via.placeholder.com/400x250?text=Blog+Post+3" alt="Blog Post 3">
+                            <img src="https://via.placeholder.com/400x220/0a1628/ffca2c?text=Linux+Tips" alt="Linux Optimization">
                         </div>
                         <div class="card-body">
                             <p class="blog-date">March 31, 2024</p>
@@ -111,10 +99,9 @@
                         </div>
                     </article>
 
-                    <!-- Blog Post 4 -->
-                    <article class="card blog-card">
+                    <article class="card">
                         <div class="card-image">
-                            <img src="https://via.placeholder.com/400x250?text=Blog+Post+4" alt="Blog Post 4">
+                            <img src="https://via.placeholder.com/400x220/0a1628/00d9ff?text=PyTorch" alt="PyTorch Beginners">
                         </div>
                         <div class="card-body">
                             <p class="blog-date">March 20, 2024</p>
@@ -124,10 +111,9 @@
                         </div>
                     </article>
 
-                    <!-- Blog Post 5 -->
-                    <article class="card blog-card">
+                    <article class="card">
                         <div class="card-image">
-                            <img src="https://via.placeholder.com/400x250?text=Blog+Post+5" alt="Blog Post 5">
+                            <img src="https://via.placeholder.com/400x220/0a1628/ff4d9d?text=Neovim" alt="Neovim Config">
                         </div>
                         <div class="card-body">
                             <p class="blog-date">March 10, 2024</p>
@@ -137,10 +123,9 @@
                         </div>
                     </article>
 
-                    <!-- Blog Post 6 -->
-                    <article class="card blog-card">
+                    <article class="card">
                         <div class="card-image">
-                            <img src="https://via.placeholder.com/400x250?text=Blog+Post+6" alt="Blog Post 6">
+                            <img src="https://via.placeholder.com/400x220/0a1628/ffca2c?text=AI+Trends" alt="AI Research Trends">
                         </div>
                         <div class="card-body">
                             <p class="blog-date">February 28, 2024</p>
@@ -149,9 +134,25 @@
                             <a href="#" class="card-link">Read More →</a>
                         </div>
                     </article>
+
                 </div>
             </section>
         </main>
     </div>
+
+    <script>
+        const html = document.documentElement;
+        const btn = document.getElementById('themeToggle');
+        const label = document.getElementById('themeLabel');
+        const saved = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', saved);
+        label.textContent = saved === 'dark' ? 'Dark Mode' : 'Light Mode';
+        btn.addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            label.textContent = next === 'dark' ? 'Dark Mode' : 'Light Mode';
+        });
+    </script>
 </body>
 </html>
