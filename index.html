@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Umar Kalyal - Portfolio | A peaceful programmer in his peaceful world">
     <title>Umar Kalyal | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for sophisticated typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+
         <!-- ===== LEFT SIDEBAR ===== -->
         <aside class="sidebar">
             <div class="sidebar-content">
-                <!-- Profile Section -->
+
+                <!-- Profile -->
                 <header class="profile">
                     <img src="images/umarKalyal.jpg" class="profile-picture" alt="Umar Kalyal">
-                    <h1 class="name">Umar Kalyal</h1>
-                    <p class="tagline">a peaceful programmer in his peaceful world</p>
+                    <div>
+                        <h1 class="name">Umar Kalyal</h1>
+                        <p class="tagline">a peaceful programmer<br>in his peaceful world</p>
+                    </div>
                 </header>
 
-                <!-- Skills Section -->
+                <!-- Skills -->
                 <section class="sidebar-section skills-section">
                     <h2 class="section-title">Skills</h2>
                     <ul class="skills-list">
@@ -35,15 +38,22 @@
                     </ul>
                 </section>
 
-                <!-- Status Section -->
+                <!-- Status -->
                 <section class="sidebar-section status-section">
                     <h2 class="section-title">Status</h2>
                     <p class="status-text">Open to collaborate on research</p>
                 </section>
+
             </div>
 
-            <!-- Social Footer -->
+            <!-- Footer -->
             <footer class="sidebar-footer">
+                <!-- Dark Mode Toggle -->
+                <div class="theme-toggle">
+                    <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark mode"></button>
+                    <span class="theme-label" id="themeLabel">Light Mode</span>
+                </div>
+
                 <nav class="social-links">
                     <a href="#" class="social-icon" title="X (Twitter)" aria-label="X">𝕏</a>
                     <a href="#" class="social-icon" title="Instagram" aria-label="Instagram">◆</a>
@@ -57,9 +67,10 @@
             </footer>
         </aside>
 
-        <!-- ===== MAIN CONTENT AREA ===== -->
+        <!-- ===== MAIN CONTENT ===== -->
         <main class="main-content">
-            <!-- Navigation Bar -->
+
+            <!-- Navbar — links pushed to RIGHT -->
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link active">About</a></li>
@@ -68,27 +79,47 @@
                 </ul>
             </nav>
 
-            <!-- Content Area -->
+            <!-- Content -->
             <section class="content">
                 <article class="about-section">
                     <h2>About Me</h2>
                     <p>
-                        I'm a programmer passionate about building elegant solutions to complex problems. 
-                        My work spans machine learning, backend development, and systems programming. 
-                        When I'm not coding, I'm exploring new ideas, contributing to open-source projects, 
+                        I'm a programmer passionate about building elegant solutions to complex problems.
+                        My work spans machine learning, backend development, and systems programming.
+                        When I'm not coding, I'm exploring new ideas, contributing to open-source projects,
                         or writing about my learnings.
                     </p>
                     <p>
-                        I believe in the power of clean code, thoughtful design, and continuous learning. 
+                        I believe in the power of clean code, thoughtful design, and continuous learning.
                         Every project is an opportunity to refine my craft and contribute meaningful work to the world.
                     </p>
                     <p>
-                        I'm always interested in collaborating on research projects, innovative ideas, 
+                        I'm always interested in collaborating on research projects, innovative ideas,
                         and technical challenges that push the boundaries of what's possible.
                     </p>
                 </article>
             </section>
+
         </main>
     </div>
+
+    <script>
+        const html = document.documentElement;
+        const btn = document.getElementById('themeToggle');
+        const label = document.getElementById('themeLabel');
+
+        // Load saved theme
+        const saved = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', saved);
+        label.textContent = saved === 'dark' ? 'Dark Mode' : 'Light Mode';
+
+        btn.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            label.textContent = next === 'dark' ? 'Dark Mode' : 'Light Mode';
+        });
+    </script>
 </body>
 </html>
