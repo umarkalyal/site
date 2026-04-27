@@ -198,7 +198,7 @@ a:hover {
     color: rgba(255, 255, 255, 0.8);
     font-style: italic;
     font-family: var(--font-family-display);
-    font-weight: 400;
+    font-weight: 1000;
     margin: 0;
 }
 
